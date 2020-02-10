@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+
+
+public class Restaurantbill 
+{
+	public static void main(String[] args) 
+	{
+		double mealCharge;
+		final double tax = 0.08; 
+		double taxAmount;
+		double totalWithTax;
+		final double tip = 0.20;
+		double tipAmount; 
+		double totalBill;
+		
+		Scanner keyboard = new Scanner(System.in);
+				
+		
+		System.out.print(" enter the charge for your meal rs");
+		mealCharge = keyboard.nextDouble();
+		
+		keyboard.nextLine();
+				
+		
+		taxAmount = mealCharge * tax;
+		totalWithTax = mealCharge + taxAmount;
+		tipAmount = totalWithTax * tip;
+		totalBill = totalWithTax + tipAmount;
+		
+		
+		System.out.println(" meal charge amount is rs" + mealCharge + ".");
+		System.out.println(" tax amount is rs" + taxAmount + ".");
+		System.out.println("tip amount is rs" + tipAmount + ".");
+		System.out.println("-----------------------------------");
+		System.out.println("Your total bill amount is rs" + totalBill + ".");
+				
+		
+		System.exit(0);
+	}
+}
